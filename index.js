@@ -28,6 +28,7 @@ function dragElement(terrariumElement) {
 
     document.onpointermove = elementDrag;
     document.onpointerup = stopElementDrag;
+    document.ondblclick = zoomOut;
   }
 
   function elementDrag(e) {
@@ -44,4 +45,9 @@ function dragElement(terrariumElement) {
     document.onpointerup = null;
     document.onpointermove = null;
   }
+
+  function zoomOut() {
+    terrariumElement.classList.add("zoom");
+  }
+    
 }
